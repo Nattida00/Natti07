@@ -62,10 +62,10 @@ body {
 
 /* Music (เด่น) */
 .left-text h1 {
-  font-size: clamp(2500px, 10vw, 100px); /* เพิ่มขนาดใหญ่ขึ้น */
+  font-size: clamp(60px, 8vw, 100px); /* เพิ่มขนาดใหญ่ขึ้น 
   margin: 0 0 20px 0;
   line-height: 1.2;
-  font-weight: 1500;
+  font-weight: 900;
 color: #b33a6c; /* ชมพูเข้ม */
   text-shadow: 3px 3px 0 rgba(255,182,193,0.3);
 }
@@ -327,4 +327,5 @@ color: #b33a6c; /* ชมพูเข้ม */
     height: auto;      /* รักษาอัตราส่วน */
     max-width: 550px;  /* ไม่เกินกล่อง */
   }
+
 }

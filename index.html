@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nattida</title>
+
+  <!-- ฟอนต์ Brush Script -->
+  <link href="https://fonts.cdnfonts.com/css/brush-script-mt" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main class="hero">
+    <div class="triangles" aria-hidden="true"></div>
+    <h1 class="title">
+      <a href="Home.html"><span class="first-letter">N</span>attida</a>
+    </h1>
+  </main>
+<script>
+const link = document.getElementById('linkHome');
+link.addEventListener('click', function(e){
+  e.preventDefault(); // หยุดการไปหน้าเลยทันที
+
+  // เพิ่ม class ให้เกิดอนิเมชั่น
+  document.body.classList.add('fade-out');
+
+  // รอ 500ms แล้วเปลี่ยนหน้า
+  setTimeout(() => {
+    window.location.href = link.href;
+  }, 50);
+});
+</script>
+
+</body>
+</html>

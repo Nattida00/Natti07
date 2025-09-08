@@ -1,0 +1,292 @@
+/* ================= BODY ================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdf6e3;
+  text-align: center;
+}
+
+/* ================= MENU ================= */
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2vw, 24px);
+  padding: clamp(15px, 3vw, 30px) 0;
+  font-family: "Poppins", "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu-item {
+  background-color: #ffe4ec; /* ชมพูอ่อน */
+  padding: clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
+  font-weight: 600;
+  font-size: clamp(16px, 2vw, 22px);
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #b33a6c; /* ชมพูเข้มเด่น */
+  transition: all 0.2s ease;
+}
+.menu-item:hover {
+  background: linear-gradient(135deg, #ffb6c1, #ff8da1); /* ไล่สีชมพู */
+  color: #fff;
+  transform: translateY(-5px) scale(1.05) rotate(-1deg);
+  box-shadow: 0 10px 20px rgba(255,105,180,0.3);
+}
+
+
+/* ================= CONTENT ================= */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 40px;
+  flex-wrap: wrap;
+}
+
+/* ================= PHOTO CARD ================= */
+.photo-card {
+  width: 900px;
+  max-width: 100%;
+  background-color: #ffd6e8; /* พาสเทลชมพู */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 15px 30px rgba(255,182,193,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.photo-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 50px rgba(255,105,180,0.3);
+}
+
+/* ================= CONTACT BOX ================= */
+.contact-box {
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-box h2 {
+  background: #ffe4ec;
+  border: 2px dashed #b33a6c; /* ชมพูเข้ม */
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 40px;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ================= SOCIAL ICONS ================= */
+.social i {
+  cursor: pointer;
+  font-size: clamp(18px, 3vw, 28px);
+  color: #b33a6c; /* ชมพูเข้ม */
+  padding: 10px;
+  border-radius: 10px;
+  background: #ffd6e8; /* พาสเทลชมพู */
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(255,182,193,0.3);
+}
+.social a {
+    text-decoration: none; /* ลบเส้นใต้ */
+    color: inherit;        /* ใช้สีตามที่กำหนดไว้ */
+    margin: 0 10px;        /* เว้นระยะระหว่างไอคอน */
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social a:hover {
+    color: #d63384;        /* สีชมพูเวลาหยุดเมาส์ */
+    transform: scale(1.2); /* ขยายไอคอนเมื่อ hover */
+}
+
+.social i:hover {
+  transform: scale(1.3) rotate(-5deg);
+  background: linear-gradient(135deg, #ffb6c1, #ff8da1);
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(255,105,180,0.3);
+}
+
+/* ================= BUTTON ================= */
+.btn-box { margin: 20px; }
+button {
+  font-size: clamp(14px, 2vw, 20px);
+  padding: 10px 25px;
+  border: 2px dashed #b33a6c;
+  border-radius: 15px;
+  background: #ffe4ec;
+  color: #b33a6c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(135deg, #ffb6c1, #ff8da1);
+  color: #fff;
+  border-color: #ff6699;
+}
+button:focus { outline: 2px solid #ff9eb5; }
+
+/*================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  /* ================= CONTENT ================= */
+  .content {
+    flex-direction: column;
+    margin: 15px;
+    gap: 20px;
+  }
+  /* ================= PHOTO CARD ================= */
+  .photo-card {
+    width: 50%;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  .photo-card img {
+    border-radius: 52px;
+  }
+  /* ================= CONTACT BOX ================= */
+  .contact-box {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .contact-box h2 {
+    font-size: 20px;
+    padding: 8px 15px;
+  }
+  /* ================= SOCIAL ICONS ================= */
+  .social i {
+    font-size: 18px;
+    padding: 8px;
+  }
+  /* spacing ระหว่างไอคอน social */
+  .social a {
+    margin: 0 8px;
+  }
+  /* ================= BUTTON ================= */
+  button {
+    width: 95%;
+    padding: 12px 0;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+}
+/* สำหรับมือถือเล็กมาก (เช่น 320px – 480px) */
+@media (max-width: 480px) {
+  .menu-item {
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+  .contact-box h2 {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+  .photo-card {
+    padding: 8px;
+  }
+  button {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .social i {
+    font-size: 16px;
+    padding: 6px;
+  }
+  .content {
+    margin: 10px;
+    gap: 15px;
+  }
+}@keyframes bounceSpin {
+  0% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.03) translateY(-5px) rotate(1.5deg);
+  }
+  50% {
+    transform: scale(1.02) translateY(0) rotate(-1.5deg);
+  }
+  75% {
+    transform: scale(1.03) translateY(-4px) rotate(1deg);
+  }
+  100% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+}
+
+/* เพิ่มเอฟเฟกต์ให้รูปใน photo-card */
+.photo-card img {
+  animation: bounceSpin 4s ease-in-out infinite;
+}
+
+.reactions-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none; /* ให้คลิกทะลุได้ */
+  z-index: 999;
+}
+
+.reaction {
+  position: absolute;
+  font-size: 28px;
+  opacity: 0;
+  animation: floatReaction 5s infinite;
+}
+
+.reaction-heart {
+  left: 20%;
+  animation-delay: 0s;
+}
+.reaction-like {
+  left: 40%;
+  animation-delay: 1s;
+}
+.reaction-laugh {
+  left: 60%;
+  animation-delay: 2s;
+}
+.reaction-wow {
+  left: 75%;
+  animation-delay: 3s;
+}
+.reaction-angry {
+  left: 30%;
+  animation-delay: 4s;
+}
+
+@keyframes floatReaction {
+  0% {
+    transform: translateY(-50px) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(100px) scale(1.2) rotate(10deg);
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(300px) scale(0.9) rotate(-10deg);
+    opacity: 0;
+  }
+}

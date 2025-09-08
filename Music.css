@@ -1,0 +1,330 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fdf6e3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* ================= MENU ================= */
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2vw, 24px);
+  padding: clamp(15px, 3vw, 30px) 0;
+  font-family: "Poppins", "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu-item {
+  background-color: #ffe4ec; /* ชมพูอ่อน */
+  padding: clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
+  font-weight: 600;
+  font-size: clamp(16px, 2vw, 22px);
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #b33a6c; /* ชมพูเข้มเด่น */
+  transition: all 0.2s ease;
+}
+.menu-item:hover {
+  background: linear-gradient(135deg, #ffb6c1, #ff8da1); /* ไล่สีชมพู */
+  color: #fff;
+  transform: translateY(-5px) scale(1.05) rotate(-1deg);
+  box-shadow: 0 10px 20px rgba(255,105,180,0.3);
+}
+
+/* ======================== */
+/* Layout หลัก: 2 คอลัมน์ */
+/* ======================== */
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* ดันโทรศัพท์ไปฝั่งขวา */
+  align-items: flex-end;
+  position: relative;
+  padding: clamp(30px, 5vw, 80px); /* เพิ่ม padding ให้ดูโปร่ง */
+}
+
+/* ข้อความหลัก (ชิดซ้ายบน) */
+.left-text {
+  position: absolute;
+  top: clamp(60px, 10vh, 120px);   /* ขยับลงเล็กน้อย */
+  left: clamp(30px, 8vw, 100px);   /* ขยับจากซ้าย */
+  display: flex;
+  flex-direction: column;
+  max-width: px; /* ขยายให้กว้างขึ้นบนโน๊ตบุ๊ก */
+}
+
+/* Music (เด่น) */
+.left-text h1 {
+  font-size: clamp(2500px, 10vw, 100px); /* เพิ่มขนาดใหญ่ขึ้น */
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  font-weight: 1500;
+color: #b33a6c; /* ชมพูเข้ม */
+  text-shadow: 3px 3px 0 rgba(255,182,193,0.3);
+}
+
+/* for + Everyone */
+.left-text p {
+  font-size: clamp(24px, 3.5vw, 36px); /* เพิ่มขนาดให้ชัดเจน */
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+  font-weight: 900;
+  color: #b33a6c;
+  text-shadow: 3px 3px 0 rgba(255,182,193,0.3);
+}
+
+/* โทรศัพท์ฝั่งขวาล่าง */
+.bottom-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end; /* ปรับให้เลื่อนขึ้น ไม่ชิดล่าง */
+  text-align: left ;
+  max-width: 400px;
+  margin-bottom: 30px; /* เว้นระยะจากบล็อกด้านล่าง */
+}
+
+/* เพิ่มระยะห่างระหว่างกล่องและรูปภาพ */
+.phone-box {
+  padding: clamp(20px, 4vw, 40px);
+  background: #ffe4ec;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  display: inline-block;
+  margin-bottom: 20px; /* เว้นระยะด้านล่าง */
+}
+
+.phone {
+  max-width: clamp(150px, 25vw, 280px);
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bottom-right img {
+  width: 100%;
+  height: auto;
+  max-width: 550px;
+  transform: translateX(-20px); /* ✅ ขยับซ้าย */
+}
+
+/* ปุ่ม */
+.music-btn {
+  margin-top: 20px;
+  padding: clamp(8px, 1.5vw, 14px) clamp(18px, 3vw, 30px);
+  background: #f15bb5;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: clamp(14px, 1.6vw, 18px);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.music-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(241, 91, 181, 0.3);
+}
+:root {
+  --pink-gradient-start: #ff8da1;
+  --pink-gradient-end: #ff5a85;
+  --shadow: 0 6px 18px rgba(255,105,180,0.4);
+}
+
+/* ================= BUTTON ================= */
+.wave-cta {
+  border: 0;
+  background: linear-gradient(135deg, var(--pink-gradient-start), var(--pink-gradient-end));
+  padding: 20px 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 24px);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none; /* ลบเส้นใต้ */
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+
+}
+.wave-cta:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, #ffb6c1, #ff2e65);
+  box-shadow: 0 12px 25px rgba(255,105,180,0.6);
+}
+
+/* ================= CTA TEXT ================= */
+.cta-text {
+  position: relative;   /* เพิ่ม position */
+  z-index: 2;           /* อยู่เหนือคลื่น */
+  transition: opacity 0.2s;
+}
+.wave-cta:hover .cta-text {
+  opacity: 0;           /* หายทันทีเมื่อ hover */
+}
+
+/* ================= WAVE ICON ================= */
+.wave-cta .wave-icon {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 1;           /* อยู่ใต้ข้อความ */
+   height: 40%; /* สูงสุดไม่เกิน 40% ของ .wave-icon */
+  animation: upDown 1s ease-in-out infinite alternate;
+}
+.wave-cta:hover .wave-icon {
+  opacity: 1; /* ปรากฏเมื่อ hover */
+}
+.wave-cta:hover .wave-icon i {
+  width: 10px;
+  border-radius: 5px;
+  background: #fff;
+  display: block;
+  animation: upDown 1s ease-in-out infinite alternate;
+}
+
+/* สุ่มความสูงและ delay เพื่อ effect visualizer */
+.wave-cta:hover .wave-icon i:nth-child(1) { animation-duration: 1s; animation-delay: 0s; height: 40px; }
+.wave-cta:hover .wave-icon i:nth-child(2) { animation-duration: 1.2s; animation-delay: 0.1s; height: 50px; }
+.wave-cta:hover .wave-icon i:nth-child(3) { animation-duration: 0.9s; animation-delay: 0.2s; height: 36px; }
+.wave-cta:hover .wave-icon i:nth-child(4) { animation-duration: 1.1s; animation-delay: 0.3s; height: 48px; }
+.wave-cta:hover .wave-icon i:nth-child(5) { animation-duration: 1s; animation-delay: 0.4s; height: 42px; }
+.wave-cta:hover .wave-icon i:nth-child(6) { animation-duration: 1.3s; animation-delay: 0.5s; height: 38px; }
+.wave-cta:hover .wave-icon i:nth-child(7) { animation-duration: 1s; animation-delay: 0s; height: 40px; }
+.wave-cta:hover .wave-icon i:nth-child(8) { animation-duration: 1.2s; animation-delay: 0.1s; height: 50px; }
+.wave-cta:hover .wave-icon i:nth-child(9) { animation-duration: 0.9s; animation-delay: 0.2s; height: 36px; }
+.wave-cta:hover .wave-icon i:nth-child(10) { animation-duration: 1.1s; animation-delay: 0.3s; height: 48px; }
+.wave-cta:hover .wave-icon i:nth-child(11) { animation-duration: 1s; animation-delay: 0.4s; height: 42px; }
+.wave-cta:hover .wave-icon i:nth-child(12) { animation-duration: 1.3s; animation-delay: 0.5s; height: 38px; }
+.wave-cta:hover .wave-icon i:nth-child(13) { animation-duration: 1s; animation-delay: 0s; height: 40px; }
+.wave-cta:hover .wave-icon i:nth-child(14) { animation-duration: 1.2s; animation-delay: 0.1s; height: 50px; }
+.wave-cta:hover .wave-icon i:nth-child(15) { animation-duration: 0.9s; animation-delay: 0.2s; height: 36px; }
+.wave-cta:hover .wave-icon i:nth-child(16) { animation-duration: 1.1s; animation-delay: 0.3s; height: 48px; }
+.wave-cta:hover .wave-icon i:nth-child(17) { animation-duration: 1s; animation-delay: 0.4s; height: 42px; }
+.wave-cta:hover .wave-icon i:nth-child(18) { animation-duration: 1.3s; animation-delay: 0.5s; height: 38px; }
+.wave-cta:hover .wave-icon i:nth-child(19) { animation-duration: 1s; animation-delay: 0.4s; height: 42px; }
+.wave-cta:hover .wave-icon i:nth-child(20) { animation-duration: 1.3s; animation-delay: 0.5s; height: 38px; }
+
+/* ================= KEYFRAMES ================= */
+@keyframes upDown {
+  0% { transform: translateY(0) scaleY(0.5); }
+  25% { transform: translateY(-5px) scaleY(1); }
+  50% { transform: translateY(0) scaleY(0.7); }
+  75% { transform: translateY(-8px) scaleY(1.2); }
+  100% { transform: translateY(0) scaleY(0.6); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+  .wave-cta { font-size: clamp(14px,2vw,20px); padding: 14px 22px; }
+  .wave-cta .wave-icon { height: 44px; gap: 3px; }
+  .wave-cta:hover .wave-icon i { width: 8px; }
+}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+  .heart-cta {
+    padding: 14px 22px;
+    font-size: clamp(14px,2vw,20px);
+  }
+  .heart-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+/* ======================== */
+/* Responsive: จอเล็ก */
+/* ======================== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;   /* เรียงเป็นแนวตั้ง */
+    align-items: center;      
+    text-align: center;       
+    padding: 20px;
+  }
+
+  /* ข้อความ */
+  .left-text {
+    position: static;   /* ยกเลิก absolute ที่ใช้กับ desktop */
+    margin: 20px 0;
+    align-items: center;
+  }
+
+  .left-text h1 {
+    font-size: 36px;
+  }
+
+  .left-text p {
+    font-size: 20px;
+  }
+
+  /* โทรศัพท์ */
+  .bottom-right {
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .phone {
+    max-width: 200px;
+  }
+
+  /* ปุ่ม full width */
+  .music-btn {
+    width: 100%;
+    max-width: none;   /* เอาขีดจำกัดออก */
+    padding: 14px;     /* padding เยอะขึ้น */
+    font-size: 18px;   /* ขยายฟอนต์เล็กน้อย */
+    border-radius: 12px; /* มนแต่ไม่มาก */
+  }
+}
+
+/* ======================== */
+/* Large Screens: 1440px+ */
+/* ======================== */
+@media (min-width: 1440px) {
+
+  .container {
+    padding: clamp(60px, 6vw, 150px); /* โปร่งและกว้าง */
+  }
+
+  .left-text {
+    top: clamp(120px, 12vh, 200px);   /* ขยับลงเล็กน้อย */
+    left: clamp(60px, 8vw, 160px);    /* ขยับจากซ้าย */
+    max-width: 850px;                 /* ขยายความกว้างมากขึ้น */
+  }
+
+  .left-text h1 {
+    font-size: clamp(80px, 9vw, 120px); /* ตัวใหญ่เด่นสุด */
+    margin-bottom: 35px;
+  }
+
+  .left-text p {
+    font-size: clamp(36px, 5vw, 48px); /* ชัดเจนและอ่านง่าย */
+    margin-bottom: 30px;
+  }
+
+  .bottom-right {
+    max-width: 550px;                  /* ขยายกล่องโทรศัพท์ใหญ่ขึ้น */
+  }
+
+  /* ปรับรูปภาพใน .bottom-right ให้ใหญ่เต็ม */
+  .bottom-right img {
+    width: 100%;       /* เติมเต็มกล่อง */
+    height: auto;      /* รักษาอัตราส่วน */
+    max-width: 550px;  /* ไม่เกินกล่อง */
+  }
+}

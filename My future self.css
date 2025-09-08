@@ -1,0 +1,190 @@
+/* ================= BODY ================= */
+body {
+  margin: 0;
+  font-family: "Mitr", "Poppins", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #fdf6e3 100%); /* พื้นหลังพาสเทลครีม-ชมพู */
+  text-align: center;
+  color: #b33a6c; /* ตัวอักษรชมพูเข้ม */
+  transition: background 0.3s;
+}
+
+/* ================= NAVBAR ================= */
+nav a,
+.menu-item,
+button {
+  font-family: "Poppins", "Mitr", sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #b33a6c; /* ชมพูเข้ม */
+  font-size: clamp(16px, 2vw, 28px);
+  font-weight: bold;
+  background: #ffe4ec; /* พาสเทลชมพูอ่อน */
+  padding: 5px 15px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: color 0.3s, background 0.3s;
+}
+nav a:hover {
+  background: linear-gradient(135deg, #ffb6c1, #ff8da1); /* ไล่สีชมพูอ่อน */
+  color: #fff;
+}
+
+/* ================= MENU ================= */
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2vw, 24px);
+  padding: clamp(15px, 3vw, 30px) 0;
+  font-family: "Poppins", "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu-item {
+  background-color: #ffe4ec; /* พาสเทลชมพูอ่อน */
+  padding: clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
+  font-weight: 600;
+  font-size: clamp(16px, 2vw, 22px);
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #b33a6c; /* ชมพูเข้ม */
+  transition: all 0.2s ease;
+}
+.menu-item:hover {
+  background: linear-gradient(135deg, #ffb6c1, #ff8da1);
+  color: #fff;
+  transform: translateY(-5px) scale(1.05) rotate(-1deg);
+  box-shadow: 0 10px 20px rgba(255,105,180,0.3);
+}
+
+/* ================= BUTTON ================= */
+.btn-box { margin: 20px; }
+button {
+  font-size: clamp(14px, 2vw, 20px);
+  padding: 10px 25px;
+  border: 2px dashed #b33a6c; /* ชมพูเข้ม */
+  border-radius: 15px;
+  background: #ffe4ec; /* พาสเทลชมพู */
+  color: #b33a6c; /* ชมพูเข้ม */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255,105,180,0.2);
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(135deg, #ffb6c1, #ff8da1);
+  color: #fff;
+  border-color: #ff6699;
+  box-shadow: 0 6px 20px rgba(255,105,180,0.4);
+}
+button:focus { outline: 2px solid #ff9eb5; }
+
+/* ================= CONTAINER ================= */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+.container > * { margin-bottom: 20px; }
+
+/* ================= ENVELOPE (รูปภาพ) ================= */
+.envelope {
+  position: relative;
+  width: clamp(250px, 35vw, 400px);
+  height: clamp(250px, 35vw, 400px);
+  background: #ffffff; /* สีขาว */
+  border-radius: 20px; /* ปรับมุมโค้งให้มากขึ้น */
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  box-shadow: 0 10px 25px rgba(255,182,193,0.3);
+  border: 1px solid rgba(179,58,108,0.2);
+}
+
+.envelope:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 12px 30px rgba(255,105,180,0.3);
+}
+.envelope img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= MESSAGE BOX ================= */
+.message-box {
+  width: clamp(250px, 35vw, 400px);
+  height: clamp(250px, 35vw, 400px);
+  background: #ffffff; /* สีขาว */
+  padding: 20px;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(255,182,193,0.3);
+  overflow-y: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 1s ease forwards;
+  border: 1px solid rgba(179,58,108,0.2);
+}
+.message-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(255,182,193,0.4);
+}
+.message-box h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: clamp(18px, 2.5vw, 28px);
+  letter-spacing: 0.5px;
+  color: #b33a6c; /* ชมพูเข้ม */
+}
+.message-box p {
+  line-height: 1.7;
+  font-size: clamp(14px, 1.8vw, 16px);
+  color: #b33a6c;
+}
+.important {
+  margin-top: 20px;
+  font-size: clamp(14px, 2vw, 20px);
+  color: red;
+  font-weight: bold;
+  border: 2px solid red;
+  display: inline-block;
+  padding: 3px 10px;
+  transform: rotate(-10deg);
+  animation: fadeIn 1.5s ease forwards;
+}
+.sign {
+  margin-top: 20px;
+  text-align: right;
+  font-style: italic;
+  font-size: clamp(12px, 1.5vw, 16px);
+  color: #b33a6c;
+}
+
+/* ================= SCROLLBAR ================= */
+.message-box::-webkit-scrollbar { width: 8px; }
+.message-box::-webkit-scrollbar-track { background: #ffe4ec; border-radius: 10px; }
+.message-box::-webkit-scrollbar-thumb { background: #ff9eb5; border-radius: 10px; }
+.message-box::-webkit-scrollbar-thumb:hover { background: #ff6f91; }
+
+/* ================= KEYFRAMES ================= */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  nav { gap: 20px; }
+  .container { flex-direction: column; align-items: center; padding: 0 20px; }
+  .message-box { text-align: center; }
+}
+@media (min-width: 1024px) {
+  .envelope, .message-box { width: clamp(300px, 30vw, 450px); height: clamp(300px, 30vw, 450px); }
+}
+

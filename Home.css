@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ✅ ให้สูงอย่างน้อยเต็มจอ */
+  background: #f7eccd;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  display: flex;
+  gap: clamp(12px, 2vw, 24px);  /* ✅ ยืดหดตามจอ */
+  flex-wrap: wrap; 
+  justify-content: center;
+  padding: clamp(10px, 4vw, 30px);
+}
+
+.pill {
+  width: clamp(80px, 15vw, 180px);    /* ✅ ยืดอัตโนมัติ */
+  aspect-ratio: 1 / 2.5;              /* ✅ รักษาสัดส่วน pill */
+  border: 4px solid black;
+  border-radius: clamp(40px, 12vw, 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: clamp(18px, 3vw, 32px);  /* ✅ ฟอนต์ปรับตามกล่อง */
+  font-weight: bold;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pill span {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;           /* เว้นขอบซ้ายขวา */
+  line-height: 1.2;          /* สูงพอดี อ่านง่าย */
+  white-space: normal;       /* ถ้าข้อความยาว ให้ขึ้นบรรทัดใหม่ */
+  word-break: break-word;    /* ตัดคำอัตโนมัติถ้ายาว */
+  overflow: hidden;          /* ป้องกันล้น */
+  max-width: 90%;            /* ไม่เกิน pill */
+}
+
+
+/* แถบสีตรงกลาง */
+.pill::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: clamp(40px, 20%, 80px); /* ✅ ยืดหยุ่นตามขนาด pill */
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.pill.red::before {
+  background: #e32222;
+}
+
+.pill.pink::before {
+  background: #f5a6d0;
+}
+
+/* เอฟเฟกต์ hover */
+.pill:hover {
+  transform: scale(1.08) rotate(1deg);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}

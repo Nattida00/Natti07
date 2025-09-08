@@ -66,7 +66,7 @@ body {
   margin: 0 0 20px 0;
   line-height: 1.2;
   font-weight: 900;
-color: #b33a6c; /* ชมพูเข้ม */
+  color: #b33a6c;
   text-shadow: 3px 3px 0 rgba(255,182,193,0.3);
 }
 
@@ -329,4 +329,5 @@ color: #b33a6c; /* ชมพูเข้ม */
   }
 
 }
+
 

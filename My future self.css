@@ -152,6 +152,7 @@ button:focus { outline: 2px solid #ff9eb5; }
   font-size: clamp(14px, 2vw, 20px);
   color: red;
   font-weight: bold;
+  font-style: italic;
   border: 2px solid red;
   display: inline-block;
   padding: 3px 10px;
@@ -161,7 +162,6 @@ button:focus { outline: 2px solid #ff9eb5; }
 .sign {
   margin-top: 20px;
   text-align: right;
-  font-style: italic;
   font-size: clamp(12px, 1.5vw, 16px);
   color: #b33a6c;
 }

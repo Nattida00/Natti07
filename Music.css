@@ -57,16 +57,16 @@ body {
   left: clamp(30px, 8vw, 100px);   /* ขยับจากซ้าย */
   display: flex;
   flex-direction: column;
-  max-width: px; /* ขยายให้กว้างขึ้นบนโน๊ตบุ๊ก */
+  max-width: 700px; /* ขยายให้กว้างขึ้นบนโน๊ตบุ๊ก */
 }
 
 /* Music (เด่น) */
 .left-text h1 {
-  font-size: clamp(60px, 8vw, 100px); /* เพิ่มขนาดใหญ่ขึ้น 
+  font-size: clamp(50px, 6vw, 80px); /* เพิ่มขนาดใหญ่ขึ้น */
   margin: 0 0 20px 0;
   line-height: 1.2;
   font-weight: 900;
-  color: #b33a6c;
+  color: #b33a6c; /* ชมพูเข้ม */
   text-shadow: 3px 3px 0 rgba(255,182,193,0.3);
 }
 
@@ -75,7 +75,7 @@ body {
   font-size: clamp(24px, 3.5vw, 36px); /* เพิ่มขนาดให้ชัดเจน */
   margin: 0 0 15px 0;
   line-height: 1.4;
-  font-weight: 900;
+  font-weight: 400;
   color: #b33a6c;
   text-shadow: 3px 3px 0 rgba(255,182,193,0.3);
 }
@@ -87,7 +87,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end; /* ปรับให้เลื่อนขึ้น ไม่ชิดล่าง */
-  text-align: left ;
+  text-align: center;
   max-width: 400px;
   margin-bottom: 30px; /* เว้นระยะจากบล็อกด้านล่าง */
 }
@@ -107,13 +107,6 @@ body {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.bottom-right img {
-  width: 100%;
-  height: auto;
-  max-width: 550px;
-  transform: translateX(-20px); /* ✅ ขยับซ้าย */
 }
 
 /* ปุ่ม */
@@ -142,7 +135,7 @@ body {
 .wave-cta {
   border: 0;
   background: linear-gradient(135deg, var(--pink-gradient-start), var(--pink-gradient-end));
-  padding: 20px 28px;
+  padding: 18px 28px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
@@ -155,7 +148,7 @@ body {
   font-size: clamp(16px, 2vw, 24px);
   position: relative;
   overflow: hidden;
-  text-decoration: none; /* ลบเส้นใต้ */
+    text-decoration: none; /* ลบเส้นใต้ */
   transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 
 }
@@ -327,7 +320,4 @@ body {
     height: auto;      /* รักษาอัตราส่วน */
     max-width: 550px;  /* ไม่เกินกล่อง */
   }
-
 }
-
-
